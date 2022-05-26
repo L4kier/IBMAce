@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><MessageAssembly iib:parser="GENERICROOT" xmlns:iib="http://com.ibm.iib/lt/1.0">
+   <version xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="INTEGER">1</version>
+   <checkpoint>
+      <messageId xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">000007C0-628CF506-00000001</messageId>
+      <propagationCount xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="INTEGER">0</propagationCount>
+      <nodeCallDepth xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="INTEGER">1</nodeCallDepth>
+      <timestamp xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="TIMESTAMP">2022-05-24 15:08:54.869999</timestamp>
+      <source>
+         <name xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">SOAP Input</name>
+         <identifier xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">gen.integration_service#FCMComposite_1_1</identifier>
+         <type xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">ComIbmSOAPInputNode</type>
+         <terminal xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">out</terminal>
+         <nodePath>
+            <application xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">integration_service</application>
+            <messageFlow xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">gen.integration_service</messageFlow>
+            <node xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">SOAP Input</node>
+         </nodePath>
+         <inputNode xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="BOOLEAN">TRUE</inputNode>
+      </source>
+      <target>
+         <name xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Route To Label</name>
+         <identifier xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">gen.integration_service#FCMComposite_1_2</identifier>
+         <type xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">ComIbmRouteToLabelNode</type>
+         <terminal xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">in</terminal>
+         <nodePath>
+            <application xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">integration_service</application>
+            <messageFlow xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">gen.integration_service</messageFlow>
+            <node xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Route To Label</node>
+         </nodePath>
+      </target>
+   </checkpoint>
+   <environment xmlns:iib="http://com.ibm.iib/lt/1.0" iib:parser="MQROOT">
+      <Service>
+         <Name iib:valueType="CHARACTER">integration_service</Name>
+         <Operation>
+            <Name iib:valueType="CHARACTER">operation1</Name>
+         </Operation>
+         <Transport>
+            <ReplyIdentifier iib:valueType="BLOB">534f41500000000000000000d7229df6c007000000000000</ReplyIdentifier>
+         </Transport>
+      </Service>
+   </environment>
+   <localEnvironment xmlns:iib="http://com.ibm.iib/lt/1.0" iib:parser="MQROOT">
+      <Destination>
+         <SOAP>
+            <Reply>
+               <ReplyIdentifier iib:valueType="BLOB">534f41500000000000000000d7229df6c007000000000000</ReplyIdentifier>
+            </Reply>
+         </SOAP>
+         <RouterList>
+            <DestinationData>
+               <labelName iib:valueType="CHARACTER">operation1</labelName>
+            </DestinationData>
+         </RouterList>
+      </Destination>
+      <SOAP>
+         <Input>
+            <Message iib:parser="SOAP">
+               <Context iib:parser="xmlnsc">
+                  <operation iib:elementType="0x03000100" iib:valueType="CHARACTER">operation1</operation>
+                  <operationType iib:elementType="0x03000100" iib:valueType="CHARACTER">REQUEST_RESPONSE</operationType>
+                  <portType iib:elementType="0x03000100" iib:valueType="CHARACTER">integration_service</portType>
+                  <portTypeNamespace iib:elementType="0x03000100" iib:valueType="CHARACTER">http://integration_service</portTypeNamespace>
+                  <port iib:elementType="0x03000100" iib:valueType="CHARACTER">integration_serviceHttpPort</port>
+                  <service iib:elementType="0x03000100" iib:valueType="CHARACTER">integration_serviceHttpService</service>
+                  <fileName iib:elementType="0x03000100" iib:valueType="CHARACTER">integration_service.wsdl</fileName>
+                  <SOAP_Version iib:valueType="CHARACTER">1.1</SOAP_Version>
+                  <Namespace xmlns:tns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns1="http://integration_service" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <_XmlDeclaration>
+                     <Version iib:elementType="0x03000100" iib:valueType="CHARACTER">1.0</Version>
+                     <Encoding iib:elementType="0x03000100" iib:valueType="CHARACTER">UTF-8</Encoding>
+                  </_XmlDeclaration>
+               </Context>
+               <Header iib:parser="xmlnsc"/>
+            </Message>
+            <Transport>
+               <HTTP>
+                  <MaxClientWaitTime iib:valueType="INTEGER">180</MaxClientWaitTime>
+               </HTTP>
+            </Transport>
+         </Input>
+      </SOAP>
+   </localEnvironment>
+   <exceptionList/>
+   <message xmlns:iib="http://com.ibm.iib/lt/1.0" iib:parser="SOAPRoot">
+      <Properties iib:parser="SOAPPROPERTYPARSER">
+         <MessageSet iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <MessageType iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <MessageFormat iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <Encoding iib:valueType="INTEGER">546</Encoding>
+         <CodedCharSetId iib:valueType="INTEGER">1208</CodedCharSetId>
+         <Transactional iib:valueType="BOOLEAN">FALSE</Transactional>
+         <Persistence iib:valueType="BOOLEAN">FALSE</Persistence>
+         <CreationTime iib:valueType="GMTTIMESTAMP">2022-05-24 15:08:54.869999</CreationTime>
+         <ExpirationTime iib:valueType="INTEGER">-1</ExpirationTime>
+         <Priority iib:valueType="INTEGER">0</Priority>
+         <ReplyIdentifier iib:valueType="BLOB">000000000000000000000000000000000000000000000000</ReplyIdentifier>
+         <ReplyProtocol iib:valueType="CHARACTER">SOAP-AXIS2</ReplyProtocol>
+         <Topic iib:elementType="0x03000000"/>
+         <ContentType iib:valueType="CHARACTER">text/plain; charset=utf-8</ContentType>
+         <IdentitySourceType iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentitySourceToken iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentitySourcePassword iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentitySourceIssuedBy iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentityMappedType iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentityMappedToken iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentityMappedPassword iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentityMappedIssuedBy iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+      </Properties>
+      <HTTPInputHeader iib:parser="WSINPHDR">
+         <Content-Type iib:valueType="CHARACTER">text/plain; charset=utf-8</Content-Type>
+         <SOAPAction iib:valueType="CHARACTER"> </SOAPAction>
+         <User-Agent iib:valueType="CHARACTER">Java/1.8.0_311</User-Agent>
+         <Host iib:valueType="CHARACTER">localhost:7800</Host>
+         <Accept iib:valueType="CHARACTER">text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2</Accept>
+         <Connection iib:valueType="CHARACTER">keep-alive</Connection>
+         <Content-Length iib:valueType="CHARACTER">347</Content-Length>
+         <X-Original-HTTP-Command iib:valueType="CHARACTER">POST /integration_service HTTP/1.1</X-Original-HTTP-Command>
+         <X-Server-Name iib:valueType="CHARACTER">localhost</X-Server-Name>
+         <X-Server-Port iib:valueType="CHARACTER">7800</X-Server-Port>
+         <X-Remote-Addr iib:valueType="CHARACTER">127.0.0.1</X-Remote-Addr>
+         <X-Remote-Host iib:valueType="CHARACTER">localhost</X-Remote-Host>
+         <X-Scheme iib:valueType="CHARACTER">http</X-Scheme>
+      </HTTPInputHeader>
+      <XMLNSC iib:parser="xmlnsc">
+         <XmlDeclaration iib:elementType="0x01000400">
+            <Version iib:elementType="0x03000100" iib:valueType="CHARACTER">1.0</Version>
+            <Encoding iib:elementType="0x03000100" iib:valueType="CHARACTER">UTF-8</Encoding>
+         </XmlDeclaration>
+         <NS1:operation1 xmlns:NS1="http://integration_service" iib:prefix="false">
+            <input1 iib:valueType="CHARACTER">input1</input1>
+         </NS1:operation1>
+      </XMLNSC>
+   </message>
+</MessageAssembly>

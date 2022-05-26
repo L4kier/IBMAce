@@ -1,0 +1,14 @@
+
+
+Importing file: C:\Users\HP\IBM\ACET12\workspace\integration_service\integration_service.wsdl
+
+The WSDL import will proceed with bindings integration_serviceHttpBinding.
+Creating wsdl schema document for file:///C:/Users/HP/IBM/ACET12/workspace/integration_service/integration_service.wsdl.
+Parsing wsdl binding {http://integration_service}integration_serviceHttpBinding.
+Parsing wsdl binding input operation1.
+Parsing wsdl binding output operation1.
+Processing doc style for operation operation1.
+Populating WSDL schema integration_service.xsd.
+Creating file integration_service.xsd in the workspace.
+Creating file integration_service_InlineSchema2.xsd in the workspace.
+Copying source WSDL integration_service.wsdl to integration_service.wsdl.
